@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Shopify theme with Vue.js",
   "author": "Benoit Deziel <benoitdeziel@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
