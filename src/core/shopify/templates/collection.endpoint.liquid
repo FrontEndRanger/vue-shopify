@@ -1,0 +1,20 @@
+{% layout none %}
+{% paginate collections by 50 %}
+
+{
+  "collections": [{% for collection in collections %}
+    {
+    {% if collection.image %}"image": "{{ collection.image }}",{% endif %}
+    "body_html": "{{ collection.description | url_escape }}",
+    "handle": "{{ collection.handle }}",
+    "id": {{ collection.id }},
+    "sort_order": "{{ collection.default_sort_by }}",
+    "template_suffix": "{{ collection.template_suffix }}",
+    "title": "{{ collection.title }}",
+    "products_count": {{ collection.products_count }},
+    "url": "{{ collection.url }}",
+    "products": []
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+{% endpaginate %}

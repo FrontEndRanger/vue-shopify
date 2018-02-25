@@ -1,0 +1,10 @@
+{%- if linklists -%}
+{
+  "linklists": [{% for link in linklists.main-menu.links %}
+    {
+      "title": "{{ link.title }}",
+      "url": "{{ link.url }}"
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+{%- endif -%}

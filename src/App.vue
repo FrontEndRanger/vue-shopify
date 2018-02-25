@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <app-header></app-header>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/Header';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    AppHeader: Header,
+  },
+  created() {
+    this.$store.dispatch('LOAD_COLLECTIONS');
+  },
+};
 </script>
 
 <style>

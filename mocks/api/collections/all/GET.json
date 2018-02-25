@@ -1,0 +1,57 @@
+[
+  {
+    "body_html": "",
+    "handle": "accessoires",
+    "id": 49509,
+    "sort_order": "manual",
+    "template_suffix": "",
+    "title": "Accessories",
+    "products_count": 0,
+    "url": "/collections/accessoires",
+    "products": []
+  },
+  {
+    "body_html": "",
+    "handle": "frontpage",
+    "id": 14020,
+    "sort_order": "created-ascending",
+    "template_suffix": "",
+    "title": "Featured",
+    "products_count": 6,
+    "url": "/collections/frontpage",
+    "products": []
+  },
+  {
+    "body_html": "",
+    "handle": "hunder",
+    "id": 14026,
+    "sort_order": "manual",
+    "template_suffix": "",
+    "title": "Hunder",
+    "products_count": 6,
+    "url": "/collections/hunder",
+    "products": []
+  },
+  {
+    "body_html": "",
+    "handle": "men",
+    "id": 30154,
+    "sort_order": "manual",
+    "template_suffix": "",
+    "title": "Men",
+    "products_count": 6,
+    "url": "/collections/men",
+    "products": []
+  },
+  {
+    "body_html": "",
+    "handle": "femme",
+    "id": 30155,
+    "sort_order": "manual",
+    "template_suffix": "",
+    "title": "Women",
+    "products_count": 0,
+    "url": "/collections/femme",
+    "products": []
+  }
+]
