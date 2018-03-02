@@ -2,6 +2,7 @@
   <div v-if="product">
     <h1>Product Detail</h1>
     <h2>{{ product.title }}</h2>
+    <div class="Product-description" :inner-html.prop="product.body_html | decode"></div>
     <div v-for="image in product.images" :key="image.id">
       <img :src="image.src">
     </div>
