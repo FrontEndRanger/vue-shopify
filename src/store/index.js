@@ -11,6 +11,7 @@ const store = new Vuex.Store({
   state: {
     linklists: {},
     collections: [],
+    products: [],
     product: {},
   },
   getters,

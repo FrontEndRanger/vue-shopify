@@ -1,0 +1,58 @@
+{% layout none %}
+{% paginate collection.products by 50 %}
+{
+  "products": [{% for product in collection.products %}
+	{
+  	"available": {{ product.available }},
+  	"body_html": "{{ product.description | url_escape }}",
+  	"collections": [{% for collection in product.collections %}"{{ collection.handle }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+  	"handle": "{{ product.handle }}",
+  	"id": {{ product.id }},
+  	"images": [{% for image in product.images %}
+        {
+          "id": {{ image.id }},
+          "position": {{ image.position }},
+          "product_id": {{ image.product_id }},
+          "src": "{{ image.src | img_url: 'large' }}"
+    	}{% unless forloop.last %},{% endunless %}{% endfor %}
+  	],
+  	"options": [{% for option in product.options %}
+        {
+          "name": "{{ option }}",
+          "position": {{ forloop.index }},
+          "product_id": {{ product.id }}
+    	}{% unless forloop.last %},{% endunless %}{% endfor %}
+  	],
+  	"product_type": "{{ product.type }}",
+  	"price": {{ product.price }},
+  	"price_max": {{ product.price_max }},
+  	"price_min": {{ product.price_min }},
+  	"tags": [{% for tag in product.tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+  	"title": "{{ product.title }}",
+  	"url": "{{ product.url }}",
+  	"vendor": "{{ product.vendor }}",
+  	"variants": [{% for variant in product.variants %}
+        {
+          {% if variant.image %}"image_id": {{ variant.image.id }},{% endif %}
+          "available": {{ variant.available }},
+          "id": {{ variant.id }},
+          "inventory_management": "{{ variant.inventory_management }}",
+          "inventory_policy": "{{ variant.inventory_policy }}",
+          "inventory_quantity": {{ variant.inventory_quantity }},
+          "option1": "{{ variant.option1 }}",
+          "option2": "{{ variant.option2 }}",
+          "option3": "{{ variant.option3 }}",
+          "position": {{ forloop.index }},
+          "price": "{{ variant.price }}",
+          "requires_shipping": {{ variant.requires_shipping }},
+          "sku": "{{ variant.sku }}",
+          "taxable": {{ variant.taxable }},
+          "title": "{{ variant.title }}",
+          "weight": {{ variant.weight_in_unit }},
+          "weight_unit": "{{ variant.weight_unit }}"
+    	}{% unless forloop.last %},{% endunless %}{% endfor %}
+  	]
+	}{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+{% endpaginate %}

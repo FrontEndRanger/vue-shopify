@@ -1,8 +1,17 @@
 <template>
-  <div>
-    <h1>{{ collection }}</h1>
+  <div v-if="collection">
+    <h1>{{ collection.title }}</h1>
+    <div v-if="products">
+      <ul>
+        <li v-for="product in products" :key="product.id">
+          <img :src="product.images[0].src">
+          {{ product.title }}
+          <router-link :to="product.url">View</router-link>
+        </li>
+      </ul>
+    </div>
     <pre>
-      {{collections}}
+      {{collection}}
     </pre>
   </div>
 </template>
@@ -15,11 +24,11 @@ export default {
     };
   },
   computed: {
-    collections() {
-      return this.$store.getters.collections;
-    },
     collection() {
       return this.$store.getters.getCollection(this.slug);
+    },
+    products() {
+      return this.$store.getters.getCollectionProducts(this.collection.handle);
     },
   },
 };

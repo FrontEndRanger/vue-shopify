@@ -1,8 +1,12 @@
 <template>
-  <div>
+  <div v-if="product">
     <h1>Product Detail</h1>
     <h2>{{ product.title }}</h2>
-    <code>{{ product.id }}</code>
+    <div v-for="image in product.images" :key="image.id">
+      <img :src="image.src">
+    </div>
+    <p>{{ product.price }}</p>
+    <pre>{{ product }}</pre>
   </div>
 </template>
 
@@ -13,12 +17,9 @@ export default {
       slug: this.$route.params.slug,
     };
   },
-  created() {
-    this.$store.dispatch('getProduct');
-  },
   computed: {
     product() {
-      return this.$store.getters.product;
+      return this.$store.getters.getProduct(this.slug);
     },
   },
 };

@@ -5,7 +5,7 @@ export default {
   SET_COLLECTIONS(state, data) {
     state.collections = data;
   },
-  LOAD_PRODUCT(state, data) {
-    state.product = data;
+  SET_PRODUCTS(state, data) {
+    state.products = data;
   },
 };

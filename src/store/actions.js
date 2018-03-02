@@ -33,17 +33,15 @@ export default {
       .catch(err => console.warn(`WARNING while loading '${key}':`, err));
   },
   LOAD_COLLECTIONS: ({ commit }) => {
-    axios.get('/collections/all?view=endpoint')
+    axios.get('/collections/all?view=collections-endpoint')
       .then((response) => {
         commit('SET_COLLECTIONS', response.data.collections);
       });
   },
-  getProduct(context) {
-    const key = 'products-data';
-    getHtmlData(key)
-      .then(processHtmlData)
-      .then(data => setJsonData(context, 'LOAD_PRODUCT', data))
-      /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-      .catch(err => console.warn(`WARNING while loading '${key}':`, err));
+  LOAD_PRODUCTS: ({ commit }) => {
+    axios.get('/collections/all?view=products-endpoint')
+      .then((response) => {
+        commit('SET_PRODUCTS', response.data.products);
+      });
   },
 };

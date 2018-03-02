@@ -2,7 +2,17 @@
   <div>
     <h1>Home</h1>
     <p>Hello World</p>
-    {{collection.title}}
+    <div v-if="collections">
+      <ul>
+        <li
+          v-for="collection in collections"
+          :key="collection.id"
+          v-if="collection.products_count > 0">
+          <router-link :to="collection.url">{{ collection.title }}</router-link>
+        </li>
+      </ul>
+      <pre>{{ collections }}</pre>
+    </div>
   </div>
 </template>
 
@@ -13,12 +23,9 @@ export default {
       slug: this.$route.params.slug,
     };
   },
-  created() {
-    this.$store.dispatch('getCollection');
-  },
   computed: {
-    collection() {
-      return this.$store.getters.collection;
+    collections() {
+      return this.$store.getters.getCollections;
     },
   },
 };
