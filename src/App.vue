@@ -2,6 +2,8 @@
   <div id="app">
     <app-header></app-header>
     <router-view/>
+    <button @click="setLang('en')">English</button>
+    <button @click="setLang('fr')">Français</button>
   </div>
 </template>
 
@@ -15,6 +17,12 @@ export default {
   },
   created() {
     this.$store.dispatch('LOAD_COLLECTIONS');
+    this.$store.dispatch('LOAD_PRODUCTS');
+  },
+  methods: {
+    setLang(lang) {
+      this.$store.dispatch('SET_LANG', lang);
+    },
   },
 };
 </script>

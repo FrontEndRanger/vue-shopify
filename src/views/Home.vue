@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Home</h1>
-    <p>Hello World</p>
+    <h1>{{ $t('home.title') }}</h1>
+    <h2>{{ $t('home.welcome') }}</h2>
     <div v-if="collections">
       <ul>
         <li

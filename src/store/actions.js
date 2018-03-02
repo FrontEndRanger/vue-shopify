@@ -44,4 +44,7 @@ export default {
         commit('SET_PRODUCTS', response.data.products);
       });
   },
+  SET_LANG: ({ commit }, payload) => {
+    commit('SET_LANG', payload);
+  },
 };

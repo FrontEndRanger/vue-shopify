@@ -1,3 +1,5 @@
+import app from '../main';
+
 export default {
   LOAD_LINKLISTS(state, data) {
     state.linklists = data.linklists;
@@ -7,5 +9,8 @@ export default {
   },
   SET_PRODUCTS(state, data) {
     state.products = data;
+  },
+  SET_LANG(state, lang) {
+    app.$i18n.locale = lang;
   },
 };
