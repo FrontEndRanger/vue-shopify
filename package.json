@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:api\"",
     "dev:server": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev:api": "json-server --watch mocks/api/db.json --routes mocks/api/routes.json",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
