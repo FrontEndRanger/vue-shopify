@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+const API = process.env.API_URL;
 const WARN_MISSING_DATA_NODE = 'No HTML data-node found';
 const WARN_NO_NODE_DATA = 'Node data is empty';
 
@@ -33,13 +34,13 @@ export default {
       .catch(err => console.warn(`WARNING while loading '${key}':`, err));
   },
   LOAD_COLLECTIONS: ({ commit }) => {
-    axios.get('/collections/all?view=collections-endpoint')
+    axios.get(`${API}/collections/all?view=collections-endpoint`)
       .then((response) => {
         commit('SET_COLLECTIONS', response.data.collections);
       });
   },
   LOAD_PRODUCTS: ({ commit }) => {
-    axios.get('/collections/all?view=products-endpoint')
+    axios.get(`${API}/collections/all?view=products-endpoint`)
       .then((response) => {
         commit('SET_PRODUCTS', response.data.products);
       });

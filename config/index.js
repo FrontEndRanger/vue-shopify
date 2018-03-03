@@ -10,15 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'assets',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/': {
-        target: 'http://jsonplaceholder.typicode.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/': ''
-        }
-      }
-    },
+    proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

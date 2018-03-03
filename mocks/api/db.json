@@ -1,0 +1,105 @@
+{
+  "collections-endpoint": {
+    "collections": [
+      {
+        "body_html": "",
+        "handle": "men",
+        "id": 30154,
+        "sort_order": "manual",
+        "template_suffix": "",
+        "title": "Men",
+        "products_count": 6,
+        "url": "/collections/men",
+        "products": []
+      }
+    ]
+  },
+  "products-endpoint": {
+    "products": [
+      {
+        "available": true,
+        "body_html":
+          "%3Cmeta%20charset=%22utf-8%22%3E%3Cmeta%20charset=%22utf-8%22%3E%3Cspan%3EThis%20American%20Apparel%20t-shirt%20is%20the%20smoothest%20and%20softest%20t-shirt%20you'll%20ever%20wear.%20Made%20of%20fine%20jersey,%20it%20has%20a%20durable,%20vintage%20feel.%20These%20classic-cut%20shirts%20are%20known%20for%20their%20premium%20quality,%20as%20well%20as%20ability%20to%20stand%20up%20to%20a%20washing%20machine%20(will%20maintain%20size%20and%20color%20after%20many%20washes).%20%3C/span%3E%3Cbr%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Fine%20jersey%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Slim%20fit%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Double%20stitched%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20made%20in%20the%20USA,%20sweatshop%20free%3C/span%3E",
+        "collections": ["frontpage", "hunder", "men"],
+        "handle": "atlas",
+        "id": 2230162881,
+        "images": [
+          {
+            "id": 5348985729,
+            "position": 1,
+            "product_id": 2230162881,
+            "src":
+              "//cdn.shopify.com/s/files/1/0000/3546/products/american_apparel__white_wrinkle_front_mockup_large.png?v=1444789633"
+          },
+          {
+            "id": 5348986369,
+            "position": 2,
+            "product_id": 2230162881,
+            "src":
+              "//cdn.shopify.com/s/files/1/0000/3546/products/american_apparel__white_wrinkle_back_mockup_large.png?v=1444789635"
+          }
+        ],
+        "options": [
+          {
+            "name": "Color",
+            "position": 1,
+            "product_id": 2230162881
+          },
+          {
+            "name": "Size",
+            "position": 2,
+            "product_id": 2230162881
+          }
+        ],
+        "product_type": "T-Shirts",
+        "price": 3500,
+        "price_max": 3500,
+        "price_min": 3500,
+        "tags": [],
+        "title": "Atlas",
+        "url": "/products/atlas",
+        "vendor": "Hunder",
+        "variants": [
+          {
+            "image_id": 5348988865,
+            "available": true,
+            "id": 7281127937,
+            "inventory_management": "",
+            "inventory_policy": "deny",
+            "inventory_quantity": 1,
+            "option1": "Teal",
+            "option2": "L",
+            "option3": "",
+            "position": 15,
+            "price": "3500",
+            "requires_shipping": true,
+            "sku": "",
+            "taxable": false,
+            "title": "Teal / L",
+            "weight": 0,
+            "weight_unit": "lb"
+          },
+          {
+            "image_id": 5348990337,
+            "available": true,
+            "id": 7281128193,
+            "inventory_management": "",
+            "inventory_policy": "deny",
+            "inventory_quantity": 1,
+            "option1": "Asphalt",
+            "option2": "L",
+            "option3": "",
+            "position": 19,
+            "price": "3500",
+            "requires_shipping": true,
+            "sku": "",
+            "taxable": false,
+            "title": "Asphalt / L",
+            "weight": 0,
+            "weight_unit": "lb"
+          }
+        ]
+      }
+    ]
+  }
+}
