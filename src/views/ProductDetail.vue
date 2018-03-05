@@ -54,16 +54,15 @@ export default {
       return this.$store.getters.getProduct(this.slug);
     },
     selectedVariant() {
-      if (!this.product) return;
+      if (!this.product) return '';
+      // eslint-disable-next-line
       return this.product.variants.find((variant) => {
-        return
-          variant.option1 === this.form.option1
-          && variant.option2 === this.form.option2
-          && variant.option3 === this.form.option3;
+        // eslint-disable-next-line
+        return variant.option1 === this.form.option1 && variant.option2 === this.form.option2 && variant.option3 === this.form.option3;
       });
     },
     selectedImage() {
-      if (!this.selectedVariant) return;
+      if (!this.selectedVariant) return '';
       return this.product.images.find(image => image.id === this.selectedVariant.image_id);
     },
   },
