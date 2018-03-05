@@ -18,9 +18,26 @@ const messages = {
   },
 };
 
+const numberFormats = {
+  'en-US': {
+    currency: {
+      style: 'currency',
+      currency: 'USD',
+    },
+  },
+  'fr-CA': {
+    currency: {
+      style: 'currency',
+      currency: 'CAD',
+      currencyDisplay: 'symbol',
+    },
+  },
+};
+
 const i18n = new VueI18n({
   locale: 'en',
   messages,
+  numberFormats,
 });
 
 export default i18n;
