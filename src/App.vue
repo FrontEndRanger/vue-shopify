@@ -2,8 +2,6 @@
   <div id="app">
     <app-header></app-header>
     <router-view/>
-    <button @click="setLang('en')">English</button>
-    <button @click="setLang('fr')">Français</button>
   </div>
 </template>
 
@@ -20,11 +18,6 @@ export default {
     this.$store.dispatch('LOAD_PRODUCTS');
     this.$store.dispatch('LOAD_CART');
   },
-  methods: {
-    setLang(lang) {
-      this.$store.dispatch('SET_LANG', lang);
-    },
-  },
 };
 </script>
 
@@ -36,6 +29,7 @@ export default {
   color: #2c3e50;
 
   max-width: 100vw;
+  min-height: 100vh;
 }
 
 *,

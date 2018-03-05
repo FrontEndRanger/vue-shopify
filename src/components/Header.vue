@@ -9,12 +9,20 @@
         <a @click="openCart()">Cart (2)</a>
       </li>
     </ul>
+    <div>
+      <lang-switcher></lang-switcher>
+    </div>
   </div>
 </template>
 
 <script>
+import LangSwitcher from '@/components/LangSwitcher';
+
 export default {
   name: 'Header',
+  components: {
+    LangSwitcher,
+  },
   created() {
     this.$store.dispatch('getLinklists');
   },
@@ -41,6 +49,7 @@ $blue-dark: #46a4f6;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 0 1rem;
 
   border-bottom: 1px solid $blue-light;
