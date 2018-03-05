@@ -8,6 +8,7 @@
           v-for="collection in collections"
           :key="collection.id"
           v-if="collection.products_count > 0">
+          <img v-if="collection.image" :src="collection.image" alt="">
           <router-link :to="collection.url">{{ collection.title }}</router-link>
         </li>
       </ul>
@@ -19,9 +20,7 @@
 <script>
 export default {
   data() {
-    return {
-      slug: this.$route.params.slug,
-    };
+    return {};
   },
   computed: {
     collections() {
