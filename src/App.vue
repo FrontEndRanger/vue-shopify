@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" class="App">
     <app-header></app-header>
-    <router-view/>
+    <div class="App-content">
+      <router-view/>
+    </div>
+    <div class="App-footer">
+      Copyright &copy; My Store.
+    </div>
   </div>
 </template>
 
@@ -21,7 +26,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,5 +59,23 @@ pre {
   padding: 1rem;
   margin: 0 0 1rem;
   word-break: break-all;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-content {
+    flex: 1 0 auto;
+    max-width: 80vw;
+    padding: 1rem 0;
+  }
+
+  &-footer {
+    width: 100vw;
+    padding: 1rem;
+    background-color: #eee;
+  }
 }
 </style>

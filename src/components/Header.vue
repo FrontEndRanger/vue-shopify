@@ -1,5 +1,5 @@
 <template>
-  <div class="Header">
+  <div class="App-header">
     <div class="AppName">My Store</div>
     <ul class="Nav">
       <li class="Nav-item" v-for="link in linklists" :key="link.index">
@@ -45,11 +45,12 @@ export default {
 $blue-light: #cbd5e8;
 $blue-dark: #46a4f6;
 
-.Header {
+.App-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
   padding: 0 1rem;
 
   border-bottom: 1px solid $blue-light;
