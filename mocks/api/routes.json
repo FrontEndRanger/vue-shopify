@@ -1,3 +1,5 @@
 {
-  "/collections/all\\?view=:name": "/:name"
+  "/collections/all\\?view=:name": "/:name",
+  "/cart.js": "/cart",
+  "/cart/add.js": "/cart-add"
 }

@@ -10,6 +10,7 @@
         "title": "Men",
         "products_count": 6,
         "url": "/collections/men",
+        "image": "/assets/mocks/images/collections/collection-1.jpg",
         "products": []
       }
     ]
@@ -18,9 +19,12 @@
     "products": [
       {
         "available": true,
-        "body_html":
-          "%3Cmeta%20charset=%22utf-8%22%3E%3Cmeta%20charset=%22utf-8%22%3E%3Cspan%3EThis%20American%20Apparel%20t-shirt%20is%20the%20smoothest%20and%20softest%20t-shirt%20you'll%20ever%20wear.%20Made%20of%20fine%20jersey,%20it%20has%20a%20durable,%20vintage%20feel.%20These%20classic-cut%20shirts%20are%20known%20for%20their%20premium%20quality,%20as%20well%20as%20ability%20to%20stand%20up%20to%20a%20washing%20machine%20(will%20maintain%20size%20and%20color%20after%20many%20washes).%20%3C/span%3E%3Cbr%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Fine%20jersey%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Slim%20fit%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Double%20stitched%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20made%20in%20the%20USA,%20sweatshop%20free%3C/span%3E",
-        "collections": ["frontpage", "hunder", "men"],
+        "body_html": "%3Cmeta%20charset=%22utf-8%22%3E%3Cmeta%20charset=%22utf-8%22%3E%3Cspan%3EThis%20American%20Apparel%20t-shirt%20is%20the%20smoothest%20and%20softest%20t-shirt%20you'll%20ever%20wear.%20Made%20of%20fine%20jersey,%20it%20has%20a%20durable,%20vintage%20feel.%20These%20classic-cut%20shirts%20are%20known%20for%20their%20premium%20quality,%20as%20well%20as%20ability%20to%20stand%20up%20to%20a%20washing%20machine%20(will%20maintain%20size%20and%20color%20after%20many%20washes).%20%3C/span%3E%3Cbr%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Fine%20jersey%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Slim%20fit%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20Double%20stitched%3C/span%3E%3Cbr%3E%3Cspan%3E%E2%80%A2%20made%20in%20the%20USA,%20sweatshop%20free%3C/span%3E",
+        "collections": [
+          "frontpage",
+          "hunder",
+          "men"
+        ],
         "handle": "atlas",
         "id": 2230162881,
         "images": [
@@ -28,27 +32,37 @@
             "id": 5348985729,
             "position": 1,
             "product_id": 2230162881,
-            "src":
-              "//cdn.shopify.com/s/files/1/0000/3546/products/american_apparel__white_wrinkle_front_mockup_large.png?v=1444789633"
+            "src": "/assets/mocks/images/products/product-1.jpg"
           },
           {
             "id": 5348986369,
             "position": 2,
             "product_id": 2230162881,
-            "src":
-              "//cdn.shopify.com/s/files/1/0000/3546/products/american_apparel__white_wrinkle_back_mockup_large.png?v=1444789635"
+            "src": "/assets/mocks/images/products/product-2.jpg"
           }
         ],
         "options": [
           {
             "name": "Color",
+            "option_group": "option1",
             "position": 1,
-            "product_id": 2230162881
+            "product_id": 2230162881,
+            "values": [
+              "White",
+              "Black"
+            ]
           },
           {
             "name": "Size",
+            "option_group": "option2",
             "position": 2,
-            "product_id": 2230162881
+            "product_id": 2230162881,
+            "values": [
+              "S",
+              "M",
+              "L",
+              "XL"
+            ]
           }
         ],
         "product_type": "T-Shirts",
@@ -61,13 +75,13 @@
         "vendor": "Hunder",
         "variants": [
           {
-            "image_id": 5348988865,
+            "image_id": 5348985729,
             "available": true,
             "id": 7281127937,
             "inventory_management": "",
             "inventory_policy": "deny",
             "inventory_quantity": 1,
-            "option1": "Teal",
+            "option1": "Black",
             "option2": "L",
             "option3": "",
             "position": 15,
@@ -80,14 +94,14 @@
             "weight_unit": "lb"
           },
           {
-            "image_id": 5348990337,
+            "image_id": 5348986369,
             "available": true,
             "id": 7281128193,
             "inventory_management": "",
             "inventory_policy": "deny",
             "inventory_quantity": 1,
-            "option1": "Asphalt",
-            "option2": "L",
+            "option1": "White",
+            "option2": "S",
             "option3": "",
             "position": 19,
             "price": "3500",
@@ -101,5 +115,77 @@
         ]
       }
     ]
-  }
+  },
+  "cart": {
+    "token": "1d19a32178501c44ef2223d73c54d16d",
+    "note": "hello!",
+    "attributes": {},
+    "total_price": 15800,
+    "total_weight": 0,
+    "item_count": 2,
+    "items": [
+      {
+        "id": 794864229,
+        "title": "Red Rain Coat - Small",
+        "price": 12900,
+        "line_price": 12900,
+        "quantity": 1,
+        "sku": null,
+        "grams": 0,
+        "vendor": "Shopify",
+        "properties": null,
+        "variant_id": 794864229,
+        "gift_card": false,
+        "url": "/products/red-rain-coat?variant=794864229",
+        "image": "http://cdn.shopify.com/s/files/1/0040/7092/products/red-rain-coat.jpeg?v=1402604893",
+        "handle": "red-rain-coat",
+        "requires_shipping": true,
+        "product_title": "Red Rain Coat",
+        "product_description": "A bright red rain coat for rainy days!",
+        "product_type": "Coat",
+        "variant_title": "Red",
+        "variant_options": [
+          "Red"
+        ]
+      },
+      {
+        "id": 794864101,
+        "title": "Gray Fedora",
+        "price": 2900,
+        "line_price": 2900,
+        "quantity": 1,
+        "sku": null,
+        "grams": 0,
+        "vendor": "Shopify",
+        "properties": null,
+        "variant_id": 794864101,
+        "gift_card": false,
+        "url": "/products/gray-fedora?variant=794864101",
+        "image": "http://cdn.shopify.com/s/files/1/0040/7092/products/gray-fedora.jpeg?v=1402604885",
+        "handle": "gray-fedora",
+        "requires_shipping": true,
+        "product_title": "Gray Fedora",
+        "product_description": "A gray hat for looking cool!",
+        "product_type": "Hats",
+        "variant_title": "Gray",
+        "variant_options": [
+          "Gray"
+        ]
+      }
+    ],
+    "requires_shipping": true
+  },
+  "cart-add": {
+    "quantity": 2,
+    "id": 794864052
+  },
+  "cart-update": {
+    "quantity": 1,
+    "id": 794864052
+  },
+  "cart-change": {
+    "quantity": 1,
+    "id": 794864052
+  },
+  "cart-clear": {}
 }
