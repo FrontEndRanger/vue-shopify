@@ -30,9 +30,14 @@ Big props to [dmccuskey](https://github.com/dmccuskey/shopify-modern) for the in
 
 ## TODO
 
-- [ ] Mock Shopify API with [json-server](https://github.com/typicode/json-server)
+- [x] Mock Shopify API with [json-server](https://github.com/typicode/json-server)
 - [ ] Add unit tests
 - [ ] i18n
+- [ ] Handle currency
+- [ ] Implement Cart
+- [ ] Implement Search
+- [ ] Implement products filter
+- [ ] Implement theme settings
 
 ## Build Setup
 
