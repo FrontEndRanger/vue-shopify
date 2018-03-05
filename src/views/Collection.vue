@@ -1,15 +1,7 @@
 <template>
   <div v-if="collection">
     <h1>{{ collection.title }}</h1>
-    <div v-if="products">
-      <ul>
-        <li v-for="product in products" :key="product.id">
-          <img :src="product.images[0].src">
-          {{ product.title }}
-          <router-link :to="product.url">View</router-link>
-        </li>
-      </ul>
-    </div>
+    <product-grid v-if="products" :products="products"></product-grid>
     <pre>
       {{collection}}
     </pre>
@@ -17,11 +9,16 @@
 </template>
 
 <script>
+import ProductGrid from '@/components/ProductGrid';
+
 export default {
   data() {
     return {
       slug: this.$route.params.slug,
     };
+  },
+  components: {
+    ProductGrid,
   },
   computed: {
     collection() {
