@@ -13,6 +13,10 @@ const store = new Vuex.Store({
     collections: [],
     products: [],
     product: {},
+    cart: {},
+    currency: {
+      rates: {},
+    },
   },
   getters,
   mutations,

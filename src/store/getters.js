@@ -17,4 +17,7 @@ export default {
   getCollectionProducts(state) {
     return collection => state.products.filter(product => product.collections.includes(collection));
   },
+  getCart(state) {
+    return state.cart;
+  },
 };

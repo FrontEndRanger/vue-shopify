@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const API = process.env.API_URL;
+const OER_APP_ID = '9317f57120ea4b259808c8cb148f2fce';
 const WARN_MISSING_DATA_NODE = 'No HTML data-node found';
 const WARN_NO_NODE_DATA = 'Node data is empty';
 
@@ -47,5 +48,20 @@ export default {
   },
   SET_LANG: ({ commit }, payload) => {
     commit('SET_LANG', payload);
+  },
+  LOAD_CART: ({ commit }) => {
+    axios.get(`${API}/cart.js`)
+      .then((response) => {
+        commit('SET_CART', response.data);
+      });
+  },
+  ADD_TO_CART: (payload) => {
+    axios.post(`${API}/cart/add.js`, payload);
+  },
+  LOAD_CURRENCY_RATES: ({ commit }) => {
+    axios.get(`https://openexchangerates.org/api/latest.json?app_id=${OER_APP_ID}&base=CAD`)
+      .then((response) => {
+        commit('SET_CURRENCY_RATES', response.rates);
+      });
   },
 };

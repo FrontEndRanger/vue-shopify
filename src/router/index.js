@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/views/Home';
 import Collection from '@/views/Collection';
 import ProductDetail from '@/views/ProductDetail';
+import Cart from '@/views/Cart';
 
 Vue.use(Router);
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/products/:slug',
       name: 'ProductDetail',
       component: ProductDetail,
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart,
     },
   ],
   scrollBehavior() {
